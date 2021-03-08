@@ -61,8 +61,8 @@ if(NOT Poco_FOUND)
   include(ExternalProject)
 
   ExternalProject_Add(poco-1.8.0.1-release
-    DOWNLOAD_COMMAND wget https://github.com/pocoproject/poco/archive/poco-1.8.0.1-release.tar.gz
-    URL_MD5 07aa03d7976d0dbc141d95821c104c10
+    GIT_REPOSITORY https://github.com/pocoproject/poco.git
+    GIT_TAG af527ab21fca5ab2659285408aec9920ed7c7b17
     TIMEOUT 600
     CMAKE_ARGS
       -DENABLE_CRYPTO:BOOL=OFF
